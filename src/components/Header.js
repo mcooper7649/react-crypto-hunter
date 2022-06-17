@@ -5,31 +5,32 @@ import {
   Select,
   Toolbar,
   Typography,
-} from "@material-ui/core";
+} from '@material-ui/core';
 import {
   createTheme,
   makeStyles,
   ThemeProvider,
-} from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
-import { CryptoState } from "../CryptoContext";
+} from '@material-ui/core/styles';
+import { useHistory } from 'react-router-dom';
+import { CryptoState } from '../CryptoContext';
+import AuthModal from './Authentication/AuthModal';
 
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
-    color: "gold",
-    fontFamily: "Montserrat",
-    fontWeight: "bold",
-    cursor: "pointer",
+    color: 'gold',
+    fontFamily: 'Montserrat',
+    fontWeight: 'bold',
+    cursor: 'pointer',
   },
 }));
 
 const darkTheme = createTheme({
   palette: {
     primary: {
-      main: "#fff",
+      main: '#fff',
     },
-    type: "dark",
+    type: 'dark',
   },
 });
 
@@ -60,9 +61,10 @@ function Header() {
               style={{ width: 100, height: 40, marginLeft: 15 }}
               onChange={(e) => setCurrency(e.target.value)}
             >
-              <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={'USD'}>USD</MenuItem>
+              <MenuItem value={'INR'}>INR</MenuItem>
             </Select>
+            <AuthModal />
           </Toolbar>
         </Container>
       </AppBar>
