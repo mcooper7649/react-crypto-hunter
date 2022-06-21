@@ -45,7 +45,7 @@ const useStyles = makeStyles({
     padding: 15,
     paddingTop: 10,
     display: 'flex',
-    flexDirectioN: 'column',
+    flexDirection: 'column',
     alignItems: 'center',
     gap: 12,
     overflowY: 'scroll',
