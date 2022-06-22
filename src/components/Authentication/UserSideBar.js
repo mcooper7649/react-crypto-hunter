@@ -90,7 +90,7 @@ export default function UserSidebar() {
     setAlert({
       open: true,
       type: 'success',
-      message: 'Logout Successfull !',
+      message: 'Logout Successfull!',
     });
 
     toggleDrawer();
@@ -107,7 +107,7 @@ export default function UserSidebar() {
 
       setAlert({
         open: true,
-        message: `${coin.name} Removed from the Watchlist !`,
+        message: `${coin.name} Removed from the Watchlist!`,
         type: 'success',
       });
     } catch (error) {
