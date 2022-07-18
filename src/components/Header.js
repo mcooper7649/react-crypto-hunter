@@ -63,7 +63,12 @@ function Header() {
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={'USD'}>USD</MenuItem>
+              <MenuItem value={'EUR'}>EUR</MenuItem>
+              <MenuItem value={'GBP'}>GBP</MenuItem>
+              <MenuItem value={'JPY'}>JPY</MenuItem>
               <MenuItem value={'INR'}>INR</MenuItem>
+              <MenuItem value={'BTC'}>BTC</MenuItem>
+              <MenuItem value={'ETH'}>ETH</MenuItem>
             </Select>
             {user ? <UserSideBar /> : <AuthModal />}
           </Toolbar>
