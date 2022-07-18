@@ -4,11 +4,12 @@ import { CoinList } from '../src/config/api';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from './firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
+
 const Crypto = createContext();
 
 const CryptoContext = ({ children }) => {
-  const [currency, setCurrency] = useState('INR');
-  const [symbol, setSymbol] = useState('₹');
+  const [currency, setCurrency] = useState('USD');
+  const [symbol, setSymbol] = useState('$');
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
@@ -36,7 +37,7 @@ const CryptoContext = ({ children }) => {
         if (coin.exists()) {
           setWatchlist(coin.data().coins);
         } else {
-          console.Console('No Items in Watchlist');
+          console.log('No Items in Watchlist');
         }
       });
       return () => {
@@ -53,8 +54,8 @@ const CryptoContext = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (currency === 'INR') setSymbol('₹');
-    else if (currency === 'USD') setSymbol('$');
+    if (currency === 'USD') setSymbol('$');
+    else if (currency === 'INR') setSymbol('₹');
 
     fetchCoins();
     // eslint-disable-next-line react-hooks/exhaustive-deps

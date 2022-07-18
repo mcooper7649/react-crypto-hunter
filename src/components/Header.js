@@ -15,6 +15,7 @@ import { useHistory } from 'react-router-dom';
 import { CryptoState } from '../CryptoContext';
 import AuthModal from './Authentication/AuthModal';
 import UserSideBar from './Authentication/UserSideBar';
+
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
