@@ -41,7 +41,7 @@ export default function CoinsTable() {
     },
     pagination: {
       '& .MuiPaginationItem-root': {
-        color: 'gold',
+        color: '#FFF',
       },
     },
   });
